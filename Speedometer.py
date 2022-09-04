@@ -13,14 +13,14 @@ from IPython.display import clear_output
 print('Dependencies loaded! \n')
 
 #get the location of the coordinate list
-filepath = "Coordinates.txt"
+filepath = input("Please provide the filename of the coordinate list: \n")
 
 #assume likely sample rate based on calculated speed (rate is seconds between each reading)
-sample_rate = .9
+sample_rate = float(input('\nSample rate of the GPS measurements in samples/second:\n'))
 
 #give some user feedback
 #clear_output(wait=True)
-print("Running some calculations...")
+print("\nRunning some calculations...")
 
 #open the local coordinate txt file and read contents into a list
 with open(filepath, 'rt', encoding="utf-8") as myfile:
